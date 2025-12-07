@@ -66,6 +66,7 @@ platform_do_upgrade() {
 	local board=$(board_name)
 
 	case "$board" in
+	comfast,cf-wr632ax|\
 	netcore,n60-pro|\
 	tplink,tl-xdr4288|\
         tplink,tl-xdr6086|\
@@ -120,6 +121,7 @@ platform_do_upgrade() {
 	huasifei,wh3000-emmc|\
 	*Airpi*|\
 	cmcc,rax3000m-emmc|\
+	qczt,qc3018ax|\
 	sl,3000-emmc|\
 	smartrg,sdg-8612|\
 	smartrg,sdg-8614|\
