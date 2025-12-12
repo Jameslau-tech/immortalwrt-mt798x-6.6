@@ -605,19 +605,19 @@ get_wifi_if_name()
 		wifi_if1s=`l1dat zone2if dev1`
 		wifi_if2s=`l1dat zone2if dev2`
 		wifi_if3s=`l1dat zone2if dev3`
-	
+
 		wifi1=`echo $wifi_if1s | awk '{print $1}'`
 		wifi1_prefix=`echo $wifi_if1s | awk '{print $2}'`
 		wifi1_apcli=`echo $wifi_if1s | awk '{print $3}'`
 		wifi1_wds=`echo $wifi_if1s | awk '{print $4}'`
 		wifi1_mesh=`echo $wifi_if1s | awk '{print $5}'`
-	
+
 		wifi2=`echo $wifi_if2s | awk '{print $1}'`
 		wifi2_prefix=`echo $wifi_if2s | awk '{print $2}'`
 		wifi2_apcli=`echo $wifi_if2s | awk '{print $3}'`
 		wifi2_wds=`echo $wifi_if2s | awk '{print $4}'`
 		wifi2_mesh=`echo $wifi_if2s | awk '{print $5}'`
-	
+
 		wifi3=`echo $wifi_if3s | awk '{print $1}'`
 		wifi3_prefix=`echo $wifi_if3s | awk '{print $2}'`
 		wifi3_apcli=`echo $wifi_if3s | awk '{print $3}'`
@@ -749,6 +749,7 @@ setup_model()
 	*wirelesstag* |\
 	glinet,x3000-emmc |\
 	*xe3000* |\
+	comfast,cf-wr632ax |\
 	*cudy* |\
 	*mt2500* |\
 	*zr-3020* |\
@@ -758,6 +759,7 @@ setup_model()
 	cmcc,a10* |\
 	xiaomi,mi-router-wr30u* |\
 	xiaomi,mi-router-ax3000t* |\
+	qczt,qc3018ax |\
 	*rax3000m* |\
 	sl,3000-emmc|\
 	h3c,nx30pro |\
@@ -769,20 +771,7 @@ setup_model()
 		MT7981_whnat $num_of_wifi $usbnet
 		;;
 	*)
-		if [ "$NUM_OF_CPU" = "4" ]; then
-			dbg "setup_model:MT7623 wifi#=$num_of_wifi"
-			MT7623 $num_of_wifi
-		elif [ "$NUM_OF_CPU" = "2" ]; then
-			if [ "$mt_whnat_en" = "1" ];then
-				MT7622_whnat $num_of_wifi
-			else
-				if [ "$wifi1_dbdc_idx" = "1" ]; then
-					MT7622_dbdc1 $num_of_wifi
-				else
-					MT7622 $num_of_wifi
-				fi
-			fi
-		fi
+		MT7986_whnat $num_of_wifi $usbnet
 		;;
 	esac
 }
