@@ -1,3 +1,5 @@
+# 欢迎来到克隆padavanonly 的仓库
+
 # Project ImmortalWrt
 
 ImmortalWrt 是 [OpenWrt](https://openwrt.org ) 的一个分支，移植了更多软件包，支持更多设备，提供默认优化配置以及面向中国大陆用户的本地化修改。
