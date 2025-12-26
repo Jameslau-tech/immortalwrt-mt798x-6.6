@@ -1,4 +1,4 @@
-# 欢迎来到克隆padavanonly 的仓库
+# 欢迎来到克隆padavanonly 的mt798x源码仓库
 
 # Project ImmortalWrt
 
