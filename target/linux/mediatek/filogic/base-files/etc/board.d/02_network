@@ -37,6 +37,9 @@ mediatek_setup_interfaces()
 	arcadyan,mozart)
 		ucidef_set_interfaces_lan_wan "lan0 eth1" eth2
 		;;
+	aigo,ags21)
+		ucidef_set_interfaces_lan_wan "lan1 lan2" eth1
+		;;
 	huasifei,wh3000-pro|\
 	*Airpi*)
                 ucidef_set_interfaces_lan "eth0 eth1"
