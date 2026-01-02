@@ -192,6 +192,18 @@ define Device/adtran_smartrg
   IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
 endef
 
+define Device/aigo_ags21
+  DEVICE_VENDOR := Aigo
+  DEVICE_MODEL := AGS21
+  DEVICE_DTS := mt7981b-aigo-ags21
+  DEVICE_DTS_DIR := ../dts
+  SUPPORTED_DEVICES := aigo,ags21
+  DEVICE_PACKAGES := 2fsck losetup mkf2fs kmod-fs-f2fs kmod-mmc \
+	luci-app-ksmbd luci-i18n-ksmbd-zh-cn ksmbd-utils
+  IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
+endef
+TARGET_DEVICES += aigo_ags21
+
 define Device/smartrg_sdg-8612
 $(call Device/adtran_smartrg)
   DEVICE_MODEL := SDG-8612
