@@ -89,7 +89,7 @@ platform_do_upgrade() {
 	bananapi,bpi-r4-poe|\
 	cetron,ct3003-ubootmod|\
 	cmcc,a10-ubootmod|\
-	cmcc,rax3000m|\
+	cmcc,rax3000m-nand|\	
 	cmcc,rax3000me|\
 	cudy,tr3000-v1-ubootmod|\
 	gatonetworks,gdsp|\

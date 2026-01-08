@@ -255,7 +255,6 @@
 		reg = <0>;
 		nvmem-cells = <&macaddr_factory_4 0>;
 		nvmem-cell-names = "mac-address";
-
 	};
 
 	band@1 {
