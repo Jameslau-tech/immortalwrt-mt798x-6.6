@@ -198,8 +198,7 @@ define Device/aigo_ags21
   DEVICE_DTS := mt7981b-aigo-ags21
   DEVICE_DTS_DIR := ../dts
   SUPPORTED_DEVICES := aigo,ags21
-  DEVICE_PACKAGES := 2fsck losetup mkf2fs kmod-fs-f2fs kmod-mmc \
-	luci-app-ksmbd luci-i18n-ksmbd-zh-cn ksmbd-utils
+  DEVICE_PACKAGES := kmod-mt7915e kmod-mt7981-firmware mt7981-wo-firmware automount coremark blkid fdisk f2fsck mkf2fs kmod-mmc mmc-utils	luci-app-ksmbd luci-i18n-ksmbd-zh-cn ksmbd-utils
   IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
 endef
 TARGET_DEVICES += aigo_ags21
