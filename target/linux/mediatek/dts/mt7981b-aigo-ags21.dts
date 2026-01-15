@@ -69,6 +69,7 @@
 			gpios = <&pio 0 GPIO_ACTIVE_LOW>;
 		};
 	};
+
 	reg_3p3v: regulator-3p3v {
 		compatible = "regulator-fixed";
 		regulator-name = "fixed-3.3V";
@@ -157,7 +158,8 @@
 		phy-mode = "2500base-x";
 		
 		nvmem-cells = <&macaddr_factory_2a 0>;
-                nvmem-cell-names = "mac-address";
+        nvmem-cell-names = "mac-address";
+		
 		fixed-link {
 			speed = <2500>;
 			full-duplex;
