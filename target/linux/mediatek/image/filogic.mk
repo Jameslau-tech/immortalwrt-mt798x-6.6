@@ -552,7 +552,7 @@ define Device/clx_s20p
   DEVICE_MODEL := S20P
   DEVICE_DTS := mt7986a-clx-s20p
   DEVICE_DTS_DIR := ../dts
-  DEVICE_PACKAGES := kmod-mt7915e kmod-mt7986-firmware mt7986-wo-firmware kmod-usb3 automount
+  DEVICE_PACKAGES := kmod-mt7915e kmod-mt7986-firmware mt7986-wo-firmware kmod-usb3 automount e2fsprogs f2fsck mkf2fs kmod-nvme kmod-mmc mmc-utils luci-app-ksmbd luci-i18n-ksmbd-zh-cn ksmbd-utils
   IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
 endef
 TARGET_DEVICES += clx_s20p
