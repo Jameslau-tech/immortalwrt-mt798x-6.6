@@ -69,14 +69,14 @@ platform_do_upgrade() {
 	comfast,cf-wr632ax|\
 	netcore,n60-pro|\
 	tplink,tl-xdr4288|\
-        tplink,tl-xdr6086|\
-        tplink,tl-xdr6088|\
+	tplink,tl-xdr6086|\
+	tplink,tl-xdr6088|\
 	xiaomi,redmi-router-ax6000-ubootmod|\
 	xiaomi,mi-router-ax3000t-ubootmod|\
-        xiaomi,mi-router-wr30u-ubootmod|\
+	xiaomi,mi-router-wr30u-ubootmod|\
 	h3c,magic-nx30-pro|\
 	jcg,q30-pro|\
-        qihoo,360t7)
+	qihoo,360t7)
 		CI_UBIPART="ubi"
     		CI_KERNPART="kernel"
       		CI_ROOTPART="rootfs"
@@ -114,6 +114,7 @@ platform_do_upgrade() {
 	acer,predator-w6d|\
 	acer,vero-w6m|\
 	arcadyan,mozart|\
+	clx,s20l|\
 	clx,s20p|\
 	glinet,gl-mt2500|\
 	glinet,gl-mt6000|\
@@ -235,6 +236,7 @@ platform_copy_config() {
 	acer,predator-w6d|\
 	acer,vero-w6m|\
 	arcadyan,mozart|\
+	clx,s20l|\
 	clx,s20p|\
 	glinet,gl-mt2500|\
 	glinet,gl-mt6000|\

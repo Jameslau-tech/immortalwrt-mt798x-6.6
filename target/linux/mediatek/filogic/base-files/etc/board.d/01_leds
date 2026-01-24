@@ -37,6 +37,11 @@ bananapi,bpi-r4-poe)
 	ucidef_set_led_netdev "lan2" "lan2" "mt7530-0:02:green:lan" "lan2" "link tx rx"
 	ucidef_set_led_netdev "lan3" "lan3" "mt7530-0:03:green:lan" "lan3" "link tx rx"
 	;;
+clx,s20l|\
+clx,s20p)
+	ucidef_set_led_netdev "wlan2g" "WLAN2G" "blue:wlan-2ghz" "ra0"
+	ucidef_set_led_netdev "wlan5g" "WLAN5G" "blue:wlan-5ghz" "rax0"
+	;;
 comfast,cf-wr632ax)
 	ucidef_set_led_default "wan" "WAN" "comfast:blue" "1"
 	ucidef_add_led_link "wan" "eth0"
