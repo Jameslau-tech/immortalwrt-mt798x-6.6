@@ -96,7 +96,7 @@
 		compatible = "mediatek,eth-mac";
 		reg = <0>;
 		phy-mode = "2500base-x";
-		nvmem-cells = <&macaddr_factory_24 0>;
+		nvmem-cells = <&macaddr_factory_2a 0>;
 		nvmem-cell-names = "mac-address";
 
 		fixed-link {
@@ -127,7 +127,7 @@
 					reg = <0>;
 					label = "wan";
 
-					nvmem-cells = <&macaddr_factory_5 0>;
+					nvmem-cells = <&macaddr_factory_24 0>;
 					nvmem-cell-names = "mac-address";
 				};
 
@@ -355,7 +355,7 @@
 
 	band@0 {
 		reg = <0>;
-		nvmem-cells = <&macaddr_factory_2a 0>;
+		nvmem-cells = <&macaddr_factory_5 0>;
 		nvmem-cell-names = "mac-address";
 
 	};
