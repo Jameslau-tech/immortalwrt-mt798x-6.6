@@ -114,6 +114,7 @@ platform_do_upgrade() {
 	acer,predator-w6d|\
 	acer,vero-w6m|\
 	arcadyan,mozart|\
+	bt,r320|\
 	clx,s20l|\
 	clx,s20p|\
 	glinet,gl-mt2500|\
@@ -234,6 +235,7 @@ platform_copy_config() {
 	acer,predator-w6d|\
 	acer,vero-w6m|\
 	arcadyan,mozart|\
+	bt,r320|\
 	clx,s20l|\
 	clx,s20p|\
 	glinet,gl-mt2500|\
