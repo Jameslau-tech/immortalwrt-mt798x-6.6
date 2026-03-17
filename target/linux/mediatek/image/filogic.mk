@@ -501,19 +501,6 @@ define Device/bananapi_bpi-r4-poe
 endef
 TARGET_DEVICES += bananapi_bpi-r4-poe
 
-define Device/bt_r320
-  DEVICE_VENDOR := Globitel
-  DEVICE_MODEL := BT-R320
-  DEVICE_DTS := mt7981b-bt-r320
-  DEVICE_DTS_DIR := ../dts
-  DEVICE_PACKAGES := kmod-mt7915e kmod-mt7981-firmware mt7981-wo-firmware kmod-usb3 automount e2fsprogs f2fsck mkf2fs
-  KERNEL := kernel-bin | lzma | fit lzma $$(KDIR)/image-$$(firstword $$(DEVICE_DTS)).dtb
-  KERNEL_INITRAMFS := kernel-bin | lzma | \
-	fit lzma $$(KDIR)/image-$$(firstword $$(DEVICE_DTS)).dtb with-initrd | pad-to 64k
-  IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
-endef
-TARGET_DEVICES += bt_r320
-
 define Device/cetron_ct3003
   DEVICE_VENDOR := Cetron
   DEVICE_MODEL := CT3003
@@ -659,6 +646,23 @@ define Device/cmcc_rax3000m-nand
   IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
 endef
 TARGET_DEVICES += cmcc_rax3000m-nand
+
+define Device/cmcc_rax3000me
+  DEVICE_VENDOR := CMCC
+  DEVICE_MODEL := RAX3000Me
+  DEVICE_DTS := mt7981b-cmcc-rax3000me
+  DEVICE_DTS_DIR := ../dts
+  SUPPORTED_DEVICES += cmcc,rax3000me
+  DEVICE_PACKAGES := kmod-mt7915e kmod-mt7981-firmware mt7981-wo-firmware kmod-usb3
+  UBINIZE_OPTS := -E 5
+  BLOCKSIZE := 128k
+  PAGESIZE := 2048
+  IMAGE_SIZE := 116736k
+  KERNEL_IN_UBI := 1
+  IMAGES += factory.bin
+  IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
+endef
+TARGET_DEVICES += cmcc_rax3000me
 
 define Device/cmcc_rax3000m-emmc
   DEVICE_VENDOR := CMCC
